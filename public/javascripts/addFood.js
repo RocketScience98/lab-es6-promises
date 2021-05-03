@@ -12,3 +12,10 @@ function addFood(step, id, callback) {
   });
 }
 /***** ^^^ DO NOT TOUCH *****/
+
+function addImage(image,id){
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      document.querySelector(id).innerHTML=`<img src="/public/images/${image}"`
+      resolve(image)
+    },500)})}
